@@ -71,10 +71,12 @@ docker network inspect c924c6b371ae # This Command help to describe allbridge ne
 docker network ls -f driver=bridge # If we need show all bridge in current env.
 
 docker network create myntwork # This Command help to create a network bridge or new network pool.
- docker network ls 
- docker network inspect c9fa118fe780
- docker network connect myntwork (ContainerId or name 6995955d1669) # This command using for connect the container with network pool or bridge.
- docker network inspect myntwork
-  docker container inspect proxyserver
-  docker network  inspect  c9fa118fe7803f9616169d19627f33e5bfa51be4b3a2f0f42b41d44c042a3869
+docker network ls 
+docker network inspect c9fa118fe780
+docker network connect myntwork (ContainerId or name 6995955d1669) # This command using for connect the container with network pool or bridge.
+docker network inspect myntwork
+docker container inspect proxyserver
+docker network  inspect  c9fa118fe7803f9616169d19627f33e5bfa51be4b3a2f0f42b41d44c042a3869
+docker container run -d --name mynwktestcontainer --network myntwork nginx # This command help to create new container with created netwok pool and bridge.
 
+docker network disconnect myntwork  mynwktestcontainer -->>docker network disconnect (Networkpool or bridge name) myntwork  mynwktestcontainer(This is Container Name or Container ID)  # This container is help to disconnect from the network pool or bridge.
