@@ -69,3 +69,12 @@ e8298b0d9c9d   none      null      local
 
 docker network inspect c924c6b371ae # This Command help to describe allbridge network related details. 
 docker network ls -f driver=bridge # If we need show all bridge in current env.
+
+docker network create myntwork # This Command help to create a network bridge or new network pool.
+ docker network ls 
+ docker network inspect c9fa118fe780
+ docker network connect myntwork (ContainerId or name 6995955d1669) # This command using for connect the container with network pool or bridge.
+ docker network inspect myntwork
+  docker container inspect proxyserver
+  docker network  inspect  c9fa118fe7803f9616169d19627f33e5bfa51be4b3a2f0f42b41d44c042a3869
+
