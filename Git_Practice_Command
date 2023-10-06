@@ -1,0 +1,141 @@
+[19-09 16:16] Datt, Amba
+
+yum update
+
+  258  yum install git -y
+
+  259  ]git - version
+
+  260  git -version
+
+  261  git --version
+
+  262  clear
+
+  263  git config --global user.name "Dushyant kochar"
+
+  264  git config --global user.email "Dushyant.kochar@hotmail.com"
+
+  265  git config --list
+
+  266  mkdir my_project
+
+  267  cd my_project/
+
+  268  git init
+
+  269  ls -l
+
+  270  ls -a
+
+  271  cd .git
+
+  272  ll
+
+  273  cd
+
+  274  cd my_project/
+
+  275  touch my_projcet.txt
+
+  276  vi my_projcet.txt
+
+  277  git status
+
+  278  git add my_projcet.txt
+
+  279  git status
+
+  280  git commit -m "This is my new changes"
+
+  281  git log
+
+
+[19-09 16:58] Datt, Amba
+
+283  git braches
+
+  284  git brach
+
+  285  git branch
+
+  286  ssh-keygen -t ed25519 -C "ashish.baurai21@gmail.com"
+
+  287  cat /root/.ssh/id_ed25519.pub
+
+  288  ssh -T git@github.com
+
+  289  git pull
+
+  290  git clone -b main git@github.com:ambadatt/dushyant1.git
+
+  291  ll
+
+  292  cd dushyant1
+
+  293  ll
+
+  294  vi test.text
+
+  295  git status
+
+  296  git add .
+
+  297  git status
+
+  298  git log test.text
+
+  299  git diff
+
+  300  git diff test.text
+
+  301  git commit -m "This is done from local ssystem"
+
+  302  git status
+
+  303  git push
+
+  304  git pull
+
+  305  ll
+
+  306  git pull
+
+  307  ll
+
+  308  git branch
+
+  309  ll
+
+  310  DevBranch  -> origin/DevBranch
+
+  311  git DevBranch  -> origin/DevBranch
+
+  312  git branch  DevBranch  -> origin/DevBranch
+
+  313  git branch origin/DevBranch
+
+  314  ll
+
+  315  git branch
+
+  316  git switch DevBranch
+
+  317  ll
+
+  318  git branch
+
+  319  ll
+
+  320  vim Amba.txt
+
+  321  git commit -am "This is done from my local user Dushyant"
+
+  322  git status
+
+  323  git push
+
+  324  history
+
+[root@Git dushyant1]#
+
