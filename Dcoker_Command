@@ -53,3 +53,8 @@ docker container run --p 80:80 --d --name webproxy nginx
 docker  run --p 80:80 --d --name webproxy nginx
 docker  run --publish 80:80 --detach --name webproxy nginx
 docker run --publish 3306:3306 --detach --name mysql --env MYSQL_RANDOM_ROOT_PASSWORD=yes mysql  # This Command use for Mysql container 
+docker container stats 6995955d1669         # This command using for container internal proccess status.
+docker container inspect 6995955d1669       # Details of one container config
+docker container exec -it 6995955d1669 bash # Open Running Containerinteractivity 
+docker  inspect -f '{{.NetworkSettings.IPAddress}}' 6995955d1669 # This Command used for filtering the output
+172.17.0.2
