@@ -1,0 +1,88 @@
+ 1  for pkg in docker.io docker-doc docker-compose podman-docker containerd runc; do sudo apt-get remove $pkg; done
+    2  sudo apt-get update
+    3  sudo apt-get install ca-certificates curl gnupg
+    4  sudo install -m 0755 -d /etc/apt/keyrings
+    5  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+    6  sudo chmod a+r /etc/apt/keyrings/docker.gpg
+    7  echo   "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+    8    "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" |   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+    9  sudo apt-get update
+   10  sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+   11  docker -version
+   12  docker --version  # This Command use for verifying the Docker version.
+   13  sudo docker run hello-world
+   14  sudo service docker start
+   15  sudo docker run hello-world
+   16  curl -fsSL https://get.docker.com -o get-docker.sh
+   17  sudo sh ./get-docker.sh --dry-run
+   18  docker image
+   19  docker images
+   20  docker  inspect images   # This Command use for detail oberview about images(If we are using inspect option).
+   21  docker  inspect --image 9c7a54a9a43c
+   22  docker  inspect 9c7a54a9a43c
+   23  docker ls -ltr
+   24  docker ls
+   25  docker ps
+   26  docker ps -a
+   27  docker ls -a
+   28  docker container ls
+   29  docker container ls -a
+   30  docker pull nigex
+   31  docker pull nginix
+   32  nginx
+   33  docker pull nginx-core
+   34  docker pull nginx
+   35  docker images
+   36  docker run -dt nginx
+   37  docker container ls
+   38  docker exec ce2ed505a88d
+   39  docker exec  run ce2ed505a88d
+   40  docker exec ce2ed505a88d
+   41  docker exec -it ce2ed505a88d
+   42  docker container inspect ce2ed505a88d
+   43  docker container run - -publish 80:80 nginx
+   44  docker container run - -publish 80:80 ngin
+   45  docker container run --publish 80:80 nginx
+   46  docker container run --dpublish 80:80 nginx
+   47  docker container run --dp 80:80 nginx
+   48  docker container run --dt --p 80:80 nginx
+   49  docker container run --d --p 80:80 nginx
+   50  docker container run -d --p 80:80 nginx
+   51  docker container run -d -p 80:80 nginx
+   52  history
+   53  docker container run - -publish 80:80
+   54  - -detach nginx
+   55  docker container run --publish 80:80 --detach nginx
+   56  docker container ls
+   57  docker container ls -a
+   58  docker container run --publish 80:80 --detach apache
+   59  docker pull tomcat
+   60  docker container run --publish 80:80 --detach tomcat
+   61  docker container run --publish 8080:80 --detach tomcat
+   62  docker ps
+   63  docker container rm 9507b8c6705e
+   64  docker stop 9507b8c6705e
+   65  docker stop ce2ed505a88d
+   66  docker rm 9507b8c6705e ce2ed505a88d
+   67  docker stop b40cb43645aa
+   68  docker container run --publish 80:80 --detach tomcat
+   69  docker stop 3b28a63708df2167befa104f7dd78106781722ae3b67da6b4bff598d3b430a0e
+   70  docker ps
+   71  docker pull https
+   72  docker pull httpd
+   73  docker container run --publish 80:80 --detach httpd
+   74  docker ps -a
+   75  docker run -it --rm -p 8888:8080 tomcat:9.0
+   76  docker run -it --rm -p 8888:8080 tomcat:9.0
+   77  docker run -it --rm tomcat:9.0        # This command use for removing the Images from host machine
+   78  docker container logs
+   79  docker container ls                  # We are using this command for list running container detail.
+   80  docker container logs f58854033421  # This Command use for checking the container logs.
+   81  docker container top f58854033421  #This command use for container internal proccess checking like Linux proccess.
+   82  history
+   83  docker container run --p 80:80 --d --name webproxy nginx
+   84  docker  run --p 80:80 --d --name webproxy nginx
+   85  docker  run --publish 80:80 --detach --name webproxy nginx
+   86  docker  run --publish 8080:80 --detach --name webproxy nginx
+   87  docker  run --publish 8080:80 --detach --name webproxy1 nginx
+   88  docker ps -a
