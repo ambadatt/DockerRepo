@@ -99,3 +99,27 @@ docker run -d --name mysql3 -e MYSQL_ALLOW_EMPTY_PASSWORD=True --mount source=my
 cd /var/lib/mysql
 cd /var/lib/docker/volumes/mysql-db/_data
 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Persistent Data : Bind Mounts
+Docker : Data Management
+➤ Bind Mounts : Bind mount means a file or directory on
+the host machine is mounted into a container..
+➤ Mapping of Host Files into a Container Files.
+➤ Bind mounts may be stored anywhere on the host system.
+➤ Non-Docker processes on the Docker host or a Docker
+container can modify them at any time.
+➤ Bind Mount can’t be use in DockerFile.
+Docker : Data Management
+➤ Good Use Case of Bind Mounts
+➤ Sharing configuration files from the host machine to
+containers.
+➤ Sharing source code or build artifacts between a development
+environment on the Docker host and a container.
+Docker : Data Management
+➤ Start nginx with Bind Mount
+➤ Run NGINX
+
+docker container run -d - -name nginx - -mount type=bind, source=$(pwd),target=/app nginx 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+mkdir dockerbind
+docker run -d --name nginbind --mount type=bind,source=$(pwd),target=/app nginx
