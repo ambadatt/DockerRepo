@@ -123,3 +123,10 @@ docker container run -d - -name nginx - -mount type=bind, source=$(pwd),target=/
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 mkdir dockerbind
 docker run -d --name nginbind --mount type=bind,source=$(pwd),target=/app nginx
+
+ docker run -d --name mysql-test -e "MYSQL_ROOT_PASSWORD=mypassword" --mount source=mysql-db,target=/var/lib/mysql mysql:8.0
+ docker container ls
+ docker volume ls
+ apt-get install mysql-client
+ mysql -u root -p mypassword -h 172.17.0.20 -P 3306
+
