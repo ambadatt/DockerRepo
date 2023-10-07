@@ -80,3 +80,11 @@ docker network  inspect  c9fa118fe7803f9616169d19627f33e5bfa51be4b3a2f0f42b41d44
 docker container run -d --name mynwktestcontainer --network myntwork nginx # This command help to create new container with created netwok pool and bridge.
 
 docker network disconnect myntwork  mynwktestcontainer -->>docker network disconnect (Networkpool or bridge name) myntwork  mynwktestcontainer(This is Container Name or Container ID)  # This container is help to disconnect from the network pool or bridge.
+
+
+docker image tag ambadatt/ubuntulatest ambadatt/ubuntulatest:1.0.1 #This Command help to Tag a new Image it's help to identify which images need to deploy in test, prod or dev.
+
+docker images
+docker login # This is used for logging docker hub repository. Then we will push the newly created image.
+docker image push ambadatt/ubuntulatest   # This command is sample of image pushing to docker hub.
+
