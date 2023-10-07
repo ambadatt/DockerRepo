@@ -88,3 +88,14 @@ docker images
 docker login # This is used for logging docker hub repository. Then we will push the newly created image.
 docker image push ambadatt/ubuntulatest   # This command is sample of image pushing to docker hub.
 
+=================================================================================================================================
+Docker persistent valume or mount point>>
+
+ 
+docker volume ls  # This Command Help to list all the docker volume present in docker host.
+docker inspect mysql3
+docker run -d --name mysql3 -e MYSQL_ALLOW_EMPTY_PASSWORD=True --mount source=mysql-db,destination=/var/lib/mysql mysql # This Command help to create a volume and attach the existing valume to newly created container.
+
+cd /var/lib/mysql
+cd /var/lib/docker/volumes/mysql-db/_data
+
