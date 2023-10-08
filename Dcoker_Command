@@ -40,6 +40,13 @@ docker container rm 9507b8c6705e
 docker stop 9507b8c6705e
 docker stop ce2ed505a88d
 docker rm 9507b8c6705e ce2ed505a88d
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+docker container rm $(docker container ls -aq) # This command used for all container need to remove from the host machine.
+docker container  stop $(docker container ls -aq) # This command used for all container need to  stop from the host machine.
+docker container  start $(docker container ls -aq) # This command used for all container need to start  from  the host machine.
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
 docker stop b40cb43645aa
 docker container run --publish 80:80 --detach tomcat
 docker stop 3b28a63708df2167befa104f7dd78106781722ae3b67da6b4bff598d3b430a0e
