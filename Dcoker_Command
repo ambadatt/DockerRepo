@@ -137,3 +137,6 @@ docker run -d --name nginbind --mount type=bind,source=$(pwd),target=/app nginx
  apt-get install mysql-client
  mysql -u root -p mypassword -h 172.17.0.20 -P 3306
 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+docker system df # This command helpful on checking the host machine docker process
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
