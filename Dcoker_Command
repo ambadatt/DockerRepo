@@ -142,3 +142,17 @@ docker system df # This command helpful on checking the host machine docker proc
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
  docker run -d --rm --name busyboxtest busybox ping -c10 google.com # The rm option is selected when container specific job is done and container on exited state, this condition the exited container is automatically deleted after container job task is done. this is help to reduce storage consuption.
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Create a monitoring image and launch a new container with buid image.
+
+docker container run -d --name busybox1 busybox
+  docker ps
+  docker container run -dt --name busybox2 busybox sh
+  docker ps
+  docker container inspect busybox
+  docker ps
+  docker container inspect busybox2
+  vi Dockerfile
+  docker build -t monitoringimage .
+  docker images
+  docker container run -dt --name heathcheckcontainer monitoringimage sh
+  
