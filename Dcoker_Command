@@ -176,3 +176,4 @@ curl -f http://dexter.kplabs.in/test214.txt
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 docker container commit dockercontainersnapshot busybox_snapshot # This command help to take snapshot or re-image after upgrading or add some extra packages in container then create ne image.
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+docker container commit --change='CMD ["ash"]' dockercontainersnapshot modifiedchangeimgaes_busybox1
