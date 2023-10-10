@@ -179,3 +179,4 @@ docker container commit dockercontainersnapshot busybox_snapshot # This command 
 docker container commit --change='CMD ["ash"]' dockercontainersnapshot modifiedchangeimgaes_busybox1
 
 docker image prune # this command used for remove the Damgling image. >> Dangling images which does not have any tag and not any reference container image(Means running container and stop container)
+docker image prune -a # This cmannd used for all images deleted which does not any container referenced.
