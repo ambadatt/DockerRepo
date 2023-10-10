@@ -180,3 +180,24 @@ docker container commit --change='CMD ["ash"]' dockercontainersnapshot modifiedc
 
 docker image prune # this command used for remove the Damgling image. >> Dangling images which does not have any tag and not any reference container image(Means running container and stop container)
 docker image prune -a # This cmannd used for all images deleted which does not any container referenced.
+
+>>>>>>>>>>>>>>>>>>>>++++++++++++++++++++++++++++++++++++++++++++++>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Flattening Docker Images process >> This mean how to reduce image size and multi layer to single layer conversion process.
+docker pull ubuntu
+docker images
+  205  docker image history docker ubuntu
+  206  docker image history  ubuntu
+  207  docker run -d --name myubuntu ubuntu
+  208  docker ps
+  209  docker run --detach --name myubuntu1 ubuntu
+  210  docker ps
+  211  docker run -dt --name myubuntu2 ubuntu
+  212  docker ps -a
+  213  docker ps
+  214  docker export myubuntu2 > myubuntu.demo.tar
+  215  docker images
+  216  ll
+  217  cat myubuntu.demo.tar | docker import - myubuntu:latest
+  218  docker images
+  219  docker image history myubuntu
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>+++++++++++++++++++++++++>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
