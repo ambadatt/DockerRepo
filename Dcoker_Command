@@ -172,4 +172,5 @@ curl  http://dexter.kplabs.in/test
  
 curl -f http://dexter.kplabs.in/test214.txt
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-  
+  docker container stop $(docker container ps -aq) #This command help to stop all container from Docker hosts.
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
