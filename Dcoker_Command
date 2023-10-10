@@ -174,3 +174,5 @@ curl -f http://dexter.kplabs.in/test214.txt
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
   docker container stop $(docker container ps -aq) #This command help to stop all container from Docker hosts.
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+docker container commit dockercontainersnapshot busybox_snapshot # This command help to take snapshot or re-image after upgrading or add some extra packages in container then create ne image.
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
