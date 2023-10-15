@@ -200,6 +200,14 @@ docker images
   217  cat myubuntu.demo.tar | docker import - myubuntu:latest
   218  docker images
   219  docker image history myubuntu
+===========================================================================
+<<<<<<<<<<<<<<<<<Docker images push process>>>>>>>>>>>>>>>>>>>> 
+docker container run -dt -p 5000:5000 --restart always --name registry2 registry
+docker tag ubuntu:latest localhost:5000/myubuntu
+docker push localhost:5000/myubuntu
+docker image inspect registry
+docker pull localhost:5000/myubuntu
+
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>+++++++++++++++++++++++++>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 Document - Docker Save and Docker Load
 Base Dockerfile
