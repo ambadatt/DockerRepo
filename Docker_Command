@@ -202,11 +202,18 @@ docker images
   219  docker image history myubuntu
 ===========================================================================
 <<<<<<<<<<<<<<<<<Docker images push process>>>>>>>>>>>>>>>>>>>> 
+Local RegisrySerevr process>>
 docker container run -dt -p 5000:5000 --restart always --name registry2 registry
 docker tag ubuntu:latest localhost:5000/myubuntu
 docker push localhost:5000/myubuntu
 docker image inspect registry
 docker pull localhost:5000/myubuntu
+
+<<<<<<<<<<Docker Hub process>>>>
+docker tag ubuntulatest ambadatt/ubuntulatest
+docker tag nginx ambadatt/nginx
+docker login
+docker push ambadatt/nginx
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>+++++++++++++++++++++++++>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 Document - Docker Save and Docker Load
