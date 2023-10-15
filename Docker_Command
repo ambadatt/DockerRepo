@@ -222,3 +222,8 @@ docker run -dt --name tmp  --health-cmd "curl --fail http://localhost" --health-
     curl  http://dexter.kplabs.in/test
      
     curl -f http://dexter.kplabs.in/test214.txt
+==============================================================================================================
+docker container stop $(docker container ls -aq)
+docker ps
+docker ps -a
+
