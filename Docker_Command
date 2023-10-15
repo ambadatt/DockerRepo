@@ -226,4 +226,7 @@ docker run -dt --name tmp  --health-cmd "curl --fail http://localhost" --health-
 docker container stop $(docker container ls -aq)
 docker ps
 docker ps -a
-
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+>>>>Docker commit command this command help to create a image of running container. This is very helpful when you upgrade or newly insttaled packages in running container.
+docker container commit (Containername>>testing) (Newimagename>>commitimagescreation)
+===========================================================================================================
