@@ -1,0 +1,36 @@
+                   <<<<Ubuntu Image creation through Dockerfile>>>>
+
+FROM ubuntu
+RUN apt-get update
+RUN apt-get -y install nginx
+CMD ["nginx","-g", "daemon off;"]
+====================================================================================
+              <<<<<<<<<<< Nginx images creation through modified index.htmls file and bulid image through copy local index through new nginx image creation.
+
+FROM ubuntu
+RUN apt-get update
+RUN apt-get -y install nginx
+COPY index.nginx-debian.html /var/www/html
+CMD ["nginx","-g", "daemon off;"]
+=====================================================================================
+             <<<<<<<<<<<<<copy_and_add_command_busyboximage>>>>>>>>>>>>>>>>>>
+
+FROM busybox
+COPY copy.txt /tmp
+ADD add.txt /tmp
+CMD ["sh"]
+=====================================================================================
+
+             <<<<<<<<<<<<Custome Nginx Alpine Image Ceation>>>>>>>>>>>>>>>>>>>>>>>>>
+FROM nginx:1.17-alpine
+COPY index.nginx-debian.html /usr/share/nginx/html
+EXPOSE 9080
+CMD ["nginx","-g", "daemon off;"]
+========================================================================================
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<Without port exposed conatiner >>>>>>>
+FROMM ubuntu
+RUN apt-get update
+RUN apt-get -y install nginx
+CMD ["nginx","-g", "daemon off;"]
+
+
