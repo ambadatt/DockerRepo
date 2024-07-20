@@ -245,3 +245,9 @@ docker ps -a
 >>>>Docker commit command this command help to create a image of running container. This is very helpful when you upgrade or newly insttaled packages in running container.
 docker container commit (Containername>>testing) (Newimagename>>commitimagescreation)
 ===========================================================================================================
+
+Document - Bind Mounts
+
+docker container run -dt --name mynginx -v /root/index:/usr/share/nginx/html nginx
+
+docker container run -dt --name mynginx --mount type=bind,source=/root/index,target=/usr/share/nginx/html nginx
