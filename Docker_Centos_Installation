@@ -18,4 +18,22 @@ Start Docker.
 content_copy
 $ sudo systemctl start docker
 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+RHEL 8 through RPM >> https://download.docker.com/linux/rhel/8/x86_64/stable/Packages/   >>> https://almalinux.pkgs.org/8/almalinux-baseos-x86_64/libcgroup-0.41-19.el8.x86_64.rpm.html
+
+ wget https://download.docker.com/linux/rhel/8/x86_64/stable/Packages/containerd.io-1.6.28-3.1.el8.x86_64.rpm
+ wget https://download.docker.com/linux/rhel/8/x86_64/stable/Packages/docker-ce-25.0.3-1.el8.x86_64.rpm
+ rpm -ivh containerd.io-1.6.28-3.1.el8.x86_64.rpm
+ sudo rpm -ivh docker-ce-25.0.3-1.el8.x86_64.rpm
+ wget https://download.docker.com/linux/rhel/8/x86_64/stable/Packages/docker-ce-cli-25.0.3-1.el8.x86_64.rpm
+ sudo rpm -ivh docker-ce-cli-25.0.3-1.el8.x86_64.rpm
+ sudo rpm -ivh docker-ce-25.0.3-1.el8.x86_64.rpm
+wget https://pkgs.org/download/libc.so.6(GLIBC_2.14)(64bit)
+ wget https://repo.almalinux.org/almalinux/8/BaseOS/x86_64/os/Packages/libcgroup-0.41-19.el8.x86_64.rpm
+ sudo rpm -ivh libcgroup-0.41-19.el8.x86_64.rpm
+ sudo rpm -ivh docker-ce-25.0.3-1.el8.x86_64.rpm
+ systemctl start docker
+ systemctl status docker
+ wget https://download.docker.com/linux/rhel/8/x86_64/stable/Packages/docker-compose-plugin-2.24.6-1.el8.x86_64.rpm
+sudo rpm -ivh docker-compose-plugin-2.24.6-1.el8.x86_64.rpm
 
