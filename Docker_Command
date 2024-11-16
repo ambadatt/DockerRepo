@@ -40,6 +40,14 @@ docker container rm 9507b8c6705e
 docker stop 9507b8c6705e
 docker stop ce2ed505a88d
 docker rm 9507b8c6705e ce2ed505a88d
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+The container stops through access on the container and stops the running process 1.
+root@86e76b94135a:/# netstat -tnlp
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1/nginx: master pro
+tcp6       0      0 :::80                   :::*                    LISTEN      1/nginx: master pro
+root@86e76b94135a:/# /etc/init.d/nginx stop
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 docker container rm $(docker container ls -aq) # This command used for all container need to remove from the host machine.
