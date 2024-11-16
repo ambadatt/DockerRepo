@@ -48,6 +48,16 @@ Proto Recv-Q Send-Q Local Address           Foreign Address         State       
 tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1/nginx: master pro
 tcp6       0      0 :::80                   :::*                    LISTEN      1/nginx: master pro
 root@86e76b94135a:/# /etc/init.d/nginx stop
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Disk usage of docker components.
+[root@Amba-Test-Server ~]# docker system df
+TYPE            TOTAL     ACTIVE    SIZE      RECLAIMABLE
+Images          0         0         0B        0B
+Containers      0         0         0B        0B
+Local Volumes   0         0         0B        0B
+Build Cache     0         0         0B        0B
+[root@Amba-Test-Server ~]#
+
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 docker container rm $(docker container ls -aq) # This command used for all container need to remove from the host machine.
