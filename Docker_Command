@@ -57,6 +57,25 @@ Containers      0         0         0B        0B
 Local Volumes   0         0         0B        0B
 Build Cache     0         0         0B        0B
 [root@Amba-Test-Server ~]#
+This command helps to show all component disk usage on detailed 
+
+[root@Amba-Test-Server ~]# docker system df -v
+Images space usage:
+
+REPOSITORY   TAG       IMAGE ID   CREATED   SIZE      SHARED SIZE   UNIQUE SIZE   CONTAINERS
+
+Containers space usage:
+
+CONTAINER ID   IMAGE     COMMAND   LOCAL VOLUMES   SIZE      CREATED   STATUS    NAMES
+
+Local Volumes space usage:
+
+VOLUME NAME   LINKS     SIZE
+
+Build cache usage: 0B
+
+CACHE ID   CACHE TYPE   SIZE      CREATED   LAST USED   USAGE     SHARED
+[root@Amba-Test-Server ~]#
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
