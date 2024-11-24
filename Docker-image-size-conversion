@@ -1,0 +1,2 @@
+docker export <imagename>   > mytest.tar
+cat mytest.tar | docker import - mytest-from-size-reduce.
