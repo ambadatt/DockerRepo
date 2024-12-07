@@ -1,3 +1,5 @@
+
+vi /etc/docker/test.json
 {
   "storage-driver": "aufs"
 }
