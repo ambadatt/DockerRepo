@@ -1,0 +1,8 @@
+{
+  "storage-driver": "aufs"
+}
+
+
+Documentation Link :
+
+https://docs.docker.com/storage/storagedriver/select-storage-driver/
